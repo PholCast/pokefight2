@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeFight</title>
+    <link rel="icon" " href="../assets/pokeball.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>PokeFight</h1>
+    <main>
+        <div id="start-screen-player-1" class="screen start-screen active">
+            <!-- Selección de personaje -->
+            <div class="character-selection">
+                <div>
+                    <input type="radio" id="bullbasaur" name="player-1-character" value="bullbasaur">
+                    <label for="bullbasaur">
+                        <img src="../assets/bullbasaur.png" alt="Bullbasaur">
+                        Bullbasaur
+                    </label>
+                </div>
+        
+                <div>
+                    <input type="radio" id="pikachu" name="player-1-character" value="pikachu">
+                    <label for="pikachu">
+                        <img src="../assets/pikachu.png" alt="Pikachu">
+                        Pikachu
+                    </label>
+                </div>
+        
+                <div>
+                    <input type="radio" id="snorlax" name="player-1-character" value="snorlax">
+                    <label for="snorlax">
+                        <img src="../assets/snorlax.png" alt="Snorlax">
+                        Snorlax
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="player-info">
+                
+                <label for="input-player-1">Jugador 1 </label>
+                <input id="input-player-1" type="text">
+                <button onclick="nextScreen()">Siguiente</button>
+            </div>
+        
+            
+        </div>
+        
+
+       <!-- Pantalla para ingresar Jugador 2 -->
+        <div id="start-screen-player-2" class="screen start-screen">
+            <div class="character-selection">
+                <div>
+                    <input type="radio" id="bullbasaur-2" name="player-2-character" value="bullbasaur">
+                    <label for="bullbasaur-2">
+                        <img src="../assets/bullbasaur.png" alt="Bullbasaur">
+                        Bullbasaur
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" id="pikachu-2" name="player-2-character" value="pikachu">
+                    <label for="pikachu-2">
+                        <img src="../assets/pikachu.png" alt="Pikachu">
+                        Pikachu
+                    </label>
+                </div>
+
+                <div>
+                    <input type="radio" id="snorlax-2" name="player-2-character" value="snorlax">
+                    <label for="snorlax-2">
+                        <img src="../assets/snorlax.png" alt="Snorlax">
+                        Snorlax
+                    </label>
+                </div>
+            </div>
+            <div class="player-info">
+                <label for="input-player-2">Jugador 2 </label>
+                <input id="input-player-2" type="text">
+                <button onclick="startGame()">Iniciar juego</button>
+            </div>
+
+            
+        </div>
+
+
+        <div id="game-screen" class="screen battle-screen">
+            
+            <div class="players">
+                <div class="player">
+                    <h3 id="name-player-1">Jugador 1</h3>
+                    <p id="pokemon-player-1">pokemon1</p>
+                    <p>Vida: <span id="health-player-1">100</span></p>
+                    <img width="90px"id="image-player-1" src="" alt="Pokémon Player 1">
+
+                </div>
+                <div id="vs">VS</div>
+                <div class="player">
+                    <h3 id="name-player-2">Jugador 2</h3>
+                    <p id="pokemon-player-2">pokemon2</p>
+                    <p>Vida: <span id="health-player-2">100</span></p>
+                    <img width="90px"id="image-player-2" src="" alt="Pokémon Player 2">
+
+                </div>
+            </div>
+            <div id="log">La batalla ha comenzado</div>
+            <div class="actions">
+                <button onclick="attack()">Atacar</button>
+                <button onclick="heal()">Curar</button>
+                
+            </div>
+            <div>
+                <button id="reset-button"onclick="reset()">Reiniciar</button><br>
+                <button id="exit-button"onclick="exit()">Salir</button>
+            </div>
+        
+            
+        </div>
+    </main>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

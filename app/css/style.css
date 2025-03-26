@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit";
+    color:white
+}
+html, body{
+    background-color: #00171f;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .screen { display: none; }
+
+h1{
+    margin: 10px 0;
+}
+main{
+    width: 100%;
+ 
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-screen.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.battle-screen.active{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    text-align: center;
+    
+}
+
+input[type="radio"]{
+    display: none;
+}
+.character-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 50px;
+}
+
+.character-selection div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+}
+
+.character-selection img {
+    width: 200px;
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+.character-selection label {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid red;
+    border-radius: 40px;
+    padding: 10px;
+    opacity: 70%;
+}
+
+.character-selection label:hover{
+    opacity: 100%
+}
+
+.character-selection input[type="radio"]:checked + label {
+    border: 6px solid#00b0fb;
+    opacity: 100%;
+    background-color: #bee9e8;
+    color: black;
+    box-shadow: 0px 0px 15px rgba(0, 91, 187, 0.5);
+
+
+}
+.player-info{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+input[type="text"] {
+    margin:10px 2px;
+    width: 250px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF; 
+    border-radius: 8px; 
+    outline: none;
+    color:#00171f   
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 10px rgba(0, 91, 187, 0.5);
+}   
+
+
+
+button {
+    width: 200px; 
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #003d80;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98); /* Efecto al presionar */
+}   
+
+.players{
+    display:flex ;
+    justify-content: space-around;
+    width: 100%; 
+    margin-bottom: 20px;
+
+}
+
+#vs{
+
+    font-size: 100px;
+}
+
+.disabledButton{
+    opacity: 50%;
+    background-color: antiquewhite;
+}
+#reset-button{
+    background-color: #008c4e;
+}
+
+#reset-button:hover{
+    background-color: #03b766;
+}
+#exit-button{
+    background-color: #c11111;
+}
+#exit-button:hover{
+    background-color: #e01919;
+}
