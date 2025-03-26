@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  pokefight:
+    image: pholcast25/pokefight-app:latest  # Imagen desde Docker Hub
+    ports:
+      - "8081:80"  
